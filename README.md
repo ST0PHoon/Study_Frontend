@@ -1,2 +1,2 @@
 # Study_Frontend
-Study about HTML, CSS, JavaScript
+HTML, CSS, JavaScript
