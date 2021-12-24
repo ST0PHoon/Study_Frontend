@@ -24,6 +24,7 @@ function createHTMLString(item) {
 
 // Handle button click
 function onButtonClick(event, items) {
+    console.log(items,'1')
     const target = event.target;
     const key = target.dataset.key;
     const value = target.dataset.value;
@@ -33,13 +34,23 @@ function onButtonClick(event, items) {
     }
     updateItems(items, key, value);
 }
+
+
+// Handle button click
+function onButtonClick() {
+    console.log('1')
+    
+
+}
 // Make the items matching {key: value} invisible.
-function updateItems(items, key, value) {
+function updateItems(items, key, value) { 
+    console.log(items);
+
     items.forEach(item => {
         if (item.dataset[key] === value) {
-            return;
+          return;
         } else {
-            item.style.display('none');
+            item.style.display='none';
         }
     });
 }
