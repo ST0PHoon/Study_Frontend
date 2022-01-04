@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<br>
+  <h2>조건문 기본구조(if)</h2>
+  <script>
+    var aa =10;
+    var bb =20;
+    if (aa<bb) { // 참일때 할일
+      document.write('aa가 bb보다 작다');
+    } else { // 거짓일때 할일
+      document.write('bb가 aa보다 작다');
+    }
+  </script>
+
+  <h2>조건문 활용(if else)</h2>
+  <script>
+    var a=10;
+    var b=20;
+    var c=30;
+    if (a>b) {
+      document.write('a가 b보다 크다');
+    } else if (b>c) {
+      document.write('b가 c보다 크다');
+    } else if (b<c) {
+      document.write('c가 b보다 크다');
+    } else {
+      document.write('어쩌라구');
+    }
+  </script>
+
+  <h2>논리 연산자</h2>
+  <script>
+    var a = 10;
+    var b = 20;
+    var c = 30;
+    if (a<c && b<c) {
+      document.write('a가 c보다 작고 b가 c보다 작다.')
+    } 
+  </script>
+
+  <h2>조건문의 응용</h2>
+  <script>
+    var a = 10;
+    var b = 20;
+    if (a!=b) {
+      if(a>b) {
+        document.write('a가 b보다 크다');
+      } else {
+        document.write('a가 b보다 작다');
+      }
+    } 
+  </script>
+
+  <h2>조건문의 축약</h2>
+  <script>
+    var a = 10;
+    var b = 20;
+    // 기본 구조
+    if (a>b) {
+      document.write('a가 b보다 크다');
+    } else {
+      document.write('a가 b보다 작다');
+    }
+    // 축약 구조
+    (a>b) ?
+      document.write('a가 b보다 크다'):
+      document.write('a가 b보다 작다');
+  </script>
+</body>
+</html>

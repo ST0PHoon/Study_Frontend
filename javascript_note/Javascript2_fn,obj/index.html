@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>함수</h1> <!--입력, 할일, 출력으로 구성-->
+  <script>
+    // 함수 기본구조
+    // function send() {
+    //   실행 내용
+    // }
+    // send();
+
+
+    //전역변수 (어디에서나 쓸 수 있음)
+    var a = 10;
+    var b = 20;
+
+    function add(x,y) {
+      //지역변수 (여기에서만 쓸 수 있음)
+      var sum = x + y; 
+      return sum; //함수 밖으로 돌려주기 위해 return
+    }
+
+    var total = add(a,b); //return 값을 tatal에 저장해줌
+    document.write(total);
+  </script>
+
+  <h1>객체</h1>
+  <script>
+    //객체 = 변수 + 함수
+    // var obj = new Object (); 1번째 생성방법
+    // var obj = {}; 2번째 생성방법
+
+    //객체 내용입력 방법 1
+    // var baby = {};
+    // baby.age="2살";
+    // baby.sex="남자";
+    // baby.birthday="5월1일";
+
+    //객체 내용입력 방법2
+    var baby = {
+      age:'2살',
+      sex:'남자',
+      birthday: '5월1일',
+      // 안에서 함수 입력하기
+      getAge: function() {
+        return this.age;
+      },
+      // 밖에서 함수 내용 입력하기
+      getAge2: getAge2,
+    }
+
+    var age = baby.getAge(); //개체의 함수 불러오기
+    document.write(age);
+    
+    document.write(baby.age);
+    document.write(baby.birthday);
+
+    //밖에서도 함수 지정할 수 있다
+    function getAge2 () {
+      return this.age;
+    }
+    var age2=baby.getAge2();
+    document.write(age2);
+
+  </script>
+</body>
+</html>
