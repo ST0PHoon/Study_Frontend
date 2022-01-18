@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
     <script src="src/main.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webshoping</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 로고-->
-    <img src="img/logo.png" alt="Logo" class="logo"/>
+    <img src="img/logo.png" alt="Logo" class="logo" />
     <!-- 버튼-->
-    <div class="buttons" >
+    <div class="buttons">
       <button class="btn" onclick="onButtonClick()">
-          <img src="img/blue_t.png" alt="" class="imgbtn" data-key="type" data-value="tshirt"/>
+        <img
+          src="img/blue_t.png"
+          alt=""
+          class="imgbtn"
+          data-key="type"
+          data-value="tshirt"
+        />
       </button>
       <button class="btn" onclick="onButtonClick">
-          <img src="img/blue_p.png" alt="" class="imgbtn" data-key="type" data-value="pants"/>
+        <img
+          src="img/blue_p.png"
+          alt=""
+          class="imgbtn"
+          data-key="type"
+          data-value="pants"
+        />
       </button>
       <button class="btn" onclick="onButtonClick">
-          <img src="img/blue_s.png" alt="" class="imgbtn" data-key="type" data-value="skirt"/>
+        <img
+          src="img/blue_s.png"
+          alt=""
+          class="imgbtn"
+          data-key="type"
+          data-value="skirt"
+        />
       </button>
-      <button class="btn colorBtn blue" data-key="color" data-value="blue"  onclick="onButtonClick">Blue</button>
-      <button class="btn colorBtn yellow" data-key="color" data-value="yellow" onclick="onButtonClick">Yellow</button>
-      <button class="btn colorBtn pink" data-key="color" data-value="pink" onclick="onButtonClick">Pink</button>
+      <button
+        class="btn colorBtn blue"
+        data-key="color"
+        data-value="blue"
+        onclick="onButtonClick"
+      >
+        Blue
+      </button>
+      <button
+        class="btn colorBtn yellow"
+        data-key="color"
+        data-value="yellow"
+        onclick="onButtonClick"
+      >
+        Yellow
+      </button>
+      <button
+        class="btn colorBtn pink"
+        data-key="color"
+        data-value="pink"
+        onclick="onButtonClick"
+      >
+        Pink
+      </button>
     </div>
     <!-- 상품-->
-    <ul class="items"> </ul>
-</body>
+    <ul class="items"></ul>
+  </body>
 </html>
