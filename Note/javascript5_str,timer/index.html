@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문자열, 타이머</title>
+  </head>
+  <body>
+    <h2>문자열</h2>
+    <script>
+      var str = "Hello world";
+      var str1 = "javascript";
+      //문자 위치 출력 , 문자가 없는 경우 -1 로 출력 indexOf()
+      var str2 = str.indexOf("world");
+      //문자열 합치기 concat()
+      var newStr1 = str.concat(str1);
+      var n = str.charAt(2);
+
+      document.write(str2 + "<br/>");
+      document.write(newStr1 + "<br/>");
+      document.write(n + "<br/>");
+    </script>
+
+    <h2>타이머</h2>
+    <script>
+      //setTimeout(할일, 시간);
+      //시간이 지나면 할일 = 함수
+      // function() { 실제로 할일}
+      // 3초 3000 단위는 ms
+      //alert('힘들죠');
+
+      // clearTimeout(할일의 이름);
+
+      var timer = setTimeout(function () {
+        alert("힘들죠");
+      }, 3000);
+
+      clearTimeout(timer);
+
+      //일정시간마다 할일
+      //setInterval(할일, 시간) clearInterval(이름)
+      var timer2 = setInterval(function () {
+        alert("힘들죠");
+      }, 3000);
+
+      clearInterval(timer2);
+    </script>
+  </body>
+</html>
