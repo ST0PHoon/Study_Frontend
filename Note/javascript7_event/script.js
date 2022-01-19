@@ -15,3 +15,7 @@ container.addEventListener("mouseenter", function () {
 container.addEventListener("mouseleave", function () {
   console.log("마우스가 나갔어요.");
 });
+window.addEventListener("keydown", function (event) {
+  console.log(event.key);
+  console.log(event.keyCode);
+});
