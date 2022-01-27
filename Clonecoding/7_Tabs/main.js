@@ -1,5 +1,26 @@
-/*
-순수 자바스크립트(vanila script)를 이용하여
-menu를 클릭하면 그에 맞는 내용이 보이도록(display block) script를 작성하시오.
-페이지가 열리자마자는 menu1과 그에 맞는 내용이 나타나도록 작성하시오.
-*/
+var targetLink = document.querySelectorAll(".tab-menu a");
+var tabContent = document.querySelectorAll("#tab-content > div");
+
+for (var i = 0; i < targetLink.length; i++) {
+  //e.target 클릭한 녀석만
+  targetLink[i].addEventListener("click", function (e) {
+    //링크방지
+    e.preventDefault();
+    var orgTarget = e.target.getAttribute("href");
+    console.log(orgTarget);
+
+    var tabTarget = orgTarget.replace("#", "");
+
+    for (var x = 0; x < tabContent.length; x++) {
+      tabContent[x].style.display = "none";
+    }
+
+    document.getElementById(tabTarget).style.display = "block";
+
+    for (var j = 0; j < targetLink.length; j++) {
+      targetLink[j].classList.remove("active");
+      e.target.classList.add("active");
+    }
+  });
+}
+document.getElementById("tabs-1").style.display = "block";
